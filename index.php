@@ -17,6 +17,8 @@
 
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
+      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style> 
     @font-face {
@@ -29,6 +31,14 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body data-spy="scroll" data-target="#site-navbar" data-offset="200">
+      
+      <div class="icon-bar">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+  <a href="#" class="google"><i class="fa fa-google"></i></a> 
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+</div>
     
     <nav class="navbar navbar-expand-lg navbar-dark site_navbar bg-dark site-navbar-light" id="site-navbar">
       <div class="container">
@@ -52,13 +62,14 @@
     </nav>
     <!-- END nav -->
 
-    <section class="site-cover" style="background-image: url(images/bg.jpg);" id="section-home">
+    <section class="site-cover" style="background-image: url(images/back.png);" id="section-home">
       <div class="container">
+          
         <div class="row align-items-center justify-content-center text-center site-vh-100">
           <div class="col-md-12">
             <h1 class="site-heading site-animate mb-3">Welcome To SWAAD SADAN</h1>
             <h2 class="h5 site-subheading mb-5 site-animate">Exclusive Homemade Traditional North Indian Cuisine</h2>    
-            <p><a href="#" target="_blank" class="btn btn-outline-white btn-lg site-animate" data-toggle="modal" data-target="#reservationModal">Order Now</a></p>
+              <p><a href="#" target="_blank" class="btn btn-outline-white btn-lg site-animate" data-toggle="modal" data-target="#reservationModal"><b>Order Now</b></a></p>
           </div>
         </div>
       </div>
@@ -104,7 +115,7 @@
 
               <div class="item">
                 <div class="media d-block mb-6 text-center site-media site-animate border-0">
-                  <img src="images/plate.jpg" alt="Free Template by colorlib.com" class="img-fluid">
+                  <img src="images/order_lunch.JPG" alt="Free Template by colorlib.com" class="img-fluid">
                   <div class="media-body p-md-5 p-4">
                     <h5 class="mt-0 h4">Order your next Lunch </h5>
                       <h5 class="text-primary menu-price">11:00 AM - 04:00 PM</h5>
@@ -123,7 +134,7 @@
                 
               <div class="item">
                 <div class="media d-block mb-6 text-center site-media site-animate border-0">
-                  <img src="images/plate.jpg" alt="Free Template by colorlib.com" class="img-fluid">
+                  <img src="images/order_dinner.JPG" alt="Free Template by colorlib.com" class="img-fluid">
                   <div class="media-body p-md-5 p-4">
                     <h5 class="mt-0 h4">Order your next Dinner </h5>
                       <h5 class="text-primary menu-price">07:00 PM - 11:00 PM</h5>
@@ -262,7 +273,7 @@
 
                     <div class="media menu-item">
                       <img class="mr-3" src="images/gallery6.jpg" class="img-fluid" alt="Free Template by colorlib.com">
-                      <div class="media-body">
+                      <div class="media-body">  
                         <h5 class="mt-0">Rice</h5>
                         <p>Types of available rice are Plain Rice, Veg Briyani, Ghee rice, Jeera rice.</p>
                         
@@ -494,7 +505,7 @@
           </div>
           <div class="col-md-1"></div>
           <div class="col-md-4 site-animate">
-            <p><img src="images/about_img_1.jpg" alt="" class="img-fluid"></p>
+            <p><img src="images/order_lunch.JPG" alt="" class="img-fluid"></p>
             <p class="text-black">
               Address: <br> SJT SWAAD SADAN HOSPITALITY PVT LTD  <br>
                             1125, Block1, Osian Chlorophyll, Porur By Pass Service Rd, Porur, 
@@ -589,7 +600,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
           <div class="modal-body">
             <div class="row">
               <div class="col-lg-12">
-                <div class="bg-image" style="background-image: url(images/swaad-sadan.jpg);"></div>
+                <div class="bg-image" style="background-image: url(images/food_delivery.jpg);"></div>
               </div>
               <div class="col-lg-12 p-5">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -600,64 +611,117 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                   <div class="row">
                     <div class="col-md-6 form-group">
                       <label for="m_fullname">Full Name</label>
-                      <input type="text" class="form-control" id="m_fullname">
+                      <input type="text" class="form-control" id="m_fullname" name="m_fullname">
                     </div>
                     <div class="col-md-6 form-group">
                       <label for="m_number">Whatsapp Number</label>
-                      <input type="text" class="form-control" id="m_number">
+                      <input type="text" class="form-control" id="m_number" name="m_number">
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12 form-group">
                       <label for="m_email">Email</label>
-                      <input type="email" class="form-control" id="m_email">
+                      <input type="email" class="form-control" id="m_email" name="m_email">
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6 form-group">
                       <label for="m_people">How Many People</label>
-                      <input type="text" class="form-control" id="m_orders">
+                      <input type="text" class="form-control" id="m_people" name="m_people">
                     </div>
                     <div class="col-md-6 form-group">
                       <label for="m_date">Date</label>
-                      <input type="text" class="form-control" id="m_date">
+                      <input type="text" class="form-control" id="m_date" name="m_date">
                     </div>
                   </div>
 
                   <div class="row">
                     
                     <div class="col-md-6 form-group">
-                      <label for="m_time">Meal</label>
-                      <select name="" id="m_meal" class="form-control">
+                      <label for="m_meal">Meal</label>
+                      <select name="m_meal" id="m_meal" class="form-control">
                         <option value="Lunch">Lunch</option>
                         <option value="Dinner">Dinner</option>
                       </select>
-                      <input type="text" class="form-control" id="m_time">
                     </div>
                     <div class="col-md-6 form-group">
-                      <label for="m_phone">Preference</label>
-                        <select name="" id="m_meal" class="form-control">
+                      <label for="m_preference">Preference</label>
+                        <select name="m_preference" id="m_preference" class="form-control">
                         <option value="Lunch">Veg.</option>
                         <option value="Dinner">Non Veg.</option>
                       </select>
-                      <input type="text" class="form-control" id="m_phone">
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="col-md-12 form-group">
-                      <label for="m_message">Address</label>
-                      <textarea class="form-control" id="m_message" cols="30" rows="7"></textarea>
+                      <label for="m_address">Address</label>
+                      <textarea class="form-control" id="m_address" name="m_address" cols="30" rows="7"></textarea>
                     </div>
                   </div>
                   
                   <div class="row">
                     <div class="col-md-12 form-group">
-                      <input type="submit" class="btn btn-primary btn-lg btn-block" value="Order Now">
+                      <input type="submit" class="btn btn-primary btn-lg btn-block" name="submit" value="Order Now" id="submit">
                     </div>
                   </div>
 
                 </form>
+                  
+                  <?php 
+                if(isset($_POST['submit'])){
+                    $to = "abhishekuniyal09@gmail.com"; // this is your Email address
+                    $from = $_POST['m_email'];
+                    $name = $_POST['m_fullname'];
+                    $number = $_POST['m_number'];
+                    $people = $_POST['m_people'];
+                    $date = $_POST['m_date'];
+                    $meal = $_POST['m_meal'];
+                    $preference = $_POST['m_preference'];
+                    $address = $_POST['m_address'];
+                    $subject = "New Order";
+                    $message = " New order is there: " . "\n\n" . "Name: "  . $fullname . "\n" . "Number: "  . $number
+                        . "\n" . "Email: "  . $from . "\n" . "No. of plates: "  . $people . "\n" . "Date: "  . $date
+                        . "\n" . "Meal: "  . $meal . "\n" . "Preference: "  . $preference . "\n" . "Address: "  . $address;
+                    
+                    $headers = "From:" . $from;
+                    mail($to,$subject,$message,$headers);
+                    
+                    }
+                  ?>
+           
+           <?php 
+           include('connect.php');
+           if(isset($_POST['submit']))
+           {
+               $name=$_REQUEST['m_fullname'];
+               $email=$_REQUEST['m_email'];
+               $number=$_REQUEST['m_number'];
+               $people=$_REQUEST['m_people'];
+               $date=$_REQUEST['m_date'];
+               $meal=$_REQUEST['m_meal'];
+               $preference=$_REQUEST['m_preference'];
+               $address=$_REQUEST['m_address'];
+               
+               $sql="INSERT INTO `orders`(`name`, `number`, `email`, `no_of_order`, `date`, `meal`, `preference`, `address`) VALUES ('".$name."','".$number."','".$email."','".$people."','".$date."','".$meal."','".$preference."','".$address."')";
+               $res = mysqli_query($con,$sql);
+               if($res>=1){
+                   echo "<script>
+                   alert('Your order is placed successfully.');
+                   window.location.href='index.php';
+                   </script>";
+               }
+               else{
+                   echo "<script> alert('Failed to place your order. Please try later.');
+                   window.location.href='#';
+                   </script>";
+               }
+           }
+           ?>
+                  
+                  
+                  
+                  
               </div>
             </div>
             
