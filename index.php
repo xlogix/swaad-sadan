@@ -42,7 +42,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark site_navbar bg-dark site-navbar-light" id="site-navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.html">swaad-sadan</a>
+        <a class="navbar-brand" href="index.html" style="font-size: 30px">swaad-sadan</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#site-nav" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
@@ -119,7 +119,21 @@
                   <div class="media-body p-md-5 p-4">
                     <h5 class="mt-0 h4">Order your next Lunch </h5>
                       <h5 class="text-primary menu-price">11:00 AM - 04:00 PM</h5>
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    
+                        <?php 
+                    include('connect.php');    
+                    
+                            if(function_exists('date_default_timezone_set'))
+                            {
+                                date_default_timezone_set("Asia/Kolkata");
+                            }
+                      
+                        $sql=mysqli_query($con,"SELECT * FROM `menu` WHERE `day` = '". date ("l")."'");
+                        $data=mysqli_fetch_array($sql);
+                      ?>      
+                    <p class="mb-4" style="font-size: 20px">    
+                        <?php echo $data['lunch']?>
+                      </p>
 
                     <p class="mb-0"><a href="#" target="_blank" data-toggle="modal" data-target="#reservationModal" class="btn btn-primary btn-sm">Order Now!</a></p>
                   </div>
@@ -138,7 +152,9 @@
                   <div class="media-body p-md-5 p-4">
                     <h5 class="mt-0 h4">Order your next Dinner </h5>
                       <h5 class="text-primary menu-price">07:00 PM - 11:00 PM</h5>
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="mb-4" style="font-size: 20px">
+                        <?php echo $data['dinner']?>
+                      </p>
 
                     <p class="mb-0"><a href="#" target="_blank" data-toggle="modal" data-target="#reservationModal" class="btn btn-primary btn-sm">Order Now!</a></p>
                   </div>
@@ -184,7 +200,7 @@
                       <img class="mr-3" src="images/gallery1.jpg" class="img-fluid" alt="Free Template by colorlib.com">
                       <div class="media-body">
                         <h5 class="mt-0">Roti</h5>
-                        <p>A total of 4 piece of fresh and home made Roti or Poori will be delivered.</p>
+                        <p style="font-size: 19px">A total of 4 piece of fresh and home made Roti or Poori will be delivered.</p>
                       </div>
                     </div>
 
@@ -192,7 +208,7 @@
                       <img class="mr-3" src="images/gallery10.jpg" class="img-fluid" alt="Free Template by colorlib.com">
                       <div class="media-body">
                         <h5 class="mt-0">Dry Vegitable</h5>
-                        <p>Different types of Dry vegitables like Bhindi Masala, Mutter Patta Gobhi, Bhindi Sabzi, Aloo Shimla Mirch, Aloo Baingan, Aloo Zeera, Aloo payaz are available.</p>
+                        <p style="font-size: 19px">Different types of Dry vegitables like Bhindi Masala, Mutter Patta Gobhi, Bhindi Sabzi, Aloo Shimla Mirch, Aloo Baingan, Aloo Zeera, Aloo payaz are available.</p>
                       </div>
                     </div>
                       
@@ -200,7 +216,7 @@
                       <img class="mr-3" src="images/gallery6.jpg" class="img-fluid" alt="Free Template by colorlib.com">
                       <div class="media-body">
                         <h5 class="mt-0">Rice</h5>
-                        <p>Types of available rice are Jeera rice, Ghee Rice, Pulao, Veg Briyani.</p>
+                        <p style="font-size: 19px">Types of available rice are Jeera rice, Ghee Rice, Pulao, Veg Briyani.</p>
                       </div>
                     </div>
 
@@ -208,7 +224,7 @@
                       <img class="mr-3" src="images/gallery8.jpg" class="img-fluid" alt="Free Template by colorlib.com">
                       <div class="media-body">
                         <h5 class="mt-0">Sweet</h5>
-                        <p>Lunch must end with some sweets like Gulab Jamun, Balushahi, Pineapple Kesari, Meethi Boondi.</p>
+                        <p style="font-size: 19px">Lunch must end with some sweets like Gulab Jamun, Balushahi, Pineapple Kesari, Meethi Boondi.</p>
                       </div>
                     </div>
 
@@ -218,7 +234,7 @@
                       <img class="mr-3" src="images/salad.jpg" class="img-fluid" alt="Free Template by colorlib.com">
                       <div class="media-body">
                         <h5 class="mt-0">Salad</h5>
-                        <p>Indian food never starts wihtout the salad and a daily salad will aid our intake of healthy fats.</p>
+                        <p style="font-size: 19px">Indian food never starts wihtout the salad and a daily salad will aid our intake of healthy fats.</p>
                       </div>
                     </div>
 
@@ -226,7 +242,7 @@
                       <img class="mr-3" src="images/gallery3.jpg" class="img-fluid" alt="Free Template by colorlib.com">
                       <div class="media-body">
                         <h5 class="mt-0">Gravy Vegitable</h5>
-                        <p>Different types of Gravy vegitable like Mix veg, Aloo tamatar, Dum aloo, Besan/Gatte ki sabzi, Kofta curry, Lauki Chana dal, Kala chana masala are available.</p>
+                        <p style="font-size: 19px">Different types of Gravy vegitable like Mix veg, Aloo tamatar, Dum aloo, Besan/Gatte ki sabzi, Kofta curry, Lauki Chana dal, Kala chana masala are available.</p>
                       </div>
                     </div>
 
@@ -234,7 +250,7 @@
                       <img class="mr-3" src="images/gallery12.jpg" class="img-fluid" alt="Free Template by colorlib.com">
                       <div class="media-body">
                         <h5 class="mt-0">Dal</h5>
-                        <p>Types of available Dal are Palak Dal, Moong Dal, Dhaba Dal, Chana Dal Tadka, Green Dal, Dal Tadka.</p>
+                        <p style="font-size: 19px">Types of available Dal are Palak Dal, Moong Dal, Dhaba Dal, Chana Dal Tadka, Green Dal, Dal Tadka.</p>
                       </div>
                     </div>
                       
@@ -242,7 +258,7 @@
                       <img class="mr-3" src="images/surprise.jpg" class="img-fluid" alt="Free Template by colorlib.com">
                       <div class="media-body">
                         <h5 class="mt-0">Surprise</h5>
-                        <p>Surprises is something which everyone loves and are excited to know what they get in it and this is something we have in the thali for you.</p>
+                        <p style="font-size: 19px">Surprises is something which everyone loves and are excited to know what they get in it and this is something we have in the thali for you.</p>
                       </div>
                     </div>
                       
@@ -257,7 +273,7 @@
                       <img class="mr-3" src="images/gallery1.jpg" class="img-fluid" alt="Free Template by colorlib.com">
                       <div class="media-body">
                         <h5 class="mt-0">Roti</h5>
-                        <p>A total of 4 piece of fresh and home made Roti or Poori will be delivered.</p>
+                        <p style="font-size: 19px">A total of 4 piece of fresh and home made Roti or Poori will be delivered.</p>
                         
                       </div>
                     </div>
@@ -266,7 +282,7 @@
                       <img class="mr-3" src="images/gallery10.jpg" class="img-fluid" alt="Free Template by colorlib.com">
                       <div class="media-body">
                         <h5 class="mt-0">Dry Vegitable</h5>
-                        <p>Different Types of dry vegitables like Aloo Patta Gobhi, Aloo Mutter, Egg Curry/Shahi Kofta, Aloo Beans, Aloo Gobhi, Mix Veg, Chicken/Kofta Curry are available.</p>
+                        <p style="font-size: 19px">Different Types of dry vegitables like Aloo Patta Gobhi, Aloo Mutter, Egg Curry/Shahi Kofta, Aloo Beans, Aloo Gobhi, Mix Veg, Chicken/Kofta Curry are available.</p>
                         
                       </div>
                     </div>
@@ -275,7 +291,7 @@
                       <img class="mr-3" src="images/gallery6.jpg" class="img-fluid" alt="Free Template by colorlib.com">
                       <div class="media-body">  
                         <h5 class="mt-0">Rice</h5>
-                        <p>Types of available rice are Plain Rice, Veg Briyani, Ghee rice, Jeera rice.</p>
+                        <p style="font-size: 19px">Types of available rice are Plain Rice, Veg Briyani, Ghee rice, Jeera rice.</p>
                         
                       </div>
                     </div>
@@ -284,7 +300,7 @@
                       <img class="mr-3" src="images/gallery8.jpg" class="img-fluid" alt="Free Template by colorlib.com">
                       <div class="media-body">
                         <h5 class="mt-0">Sweet</h5>
-                        <p>Dinner must end with some sweets like Pineapple Kesari, Gulab Jamun, Balushahi,</p>
+                        <p style="font-size: 19px">Dinner must end with some sweets like Pineapple Kesari, Gulab Jamun, Balushahi,</p>
                         
                       </div>
                     </div>
@@ -296,7 +312,7 @@
                       <img class="mr-3" src="images/salad.jpg" class="img-fluid" alt="Free Template by colorlib.com">
                       <div class="media-body">
                         <h5 class="mt-0">salad</h5>
-                        <p>Indian food never starts wihtout the salad and a daily salad will aid our intake of healthy fats.</p>
+                        <p style="font-size: 19px">Indian food never starts wihtout the salad and a daily salad will aid our intake of healthy fats.</p>
                         
                       </div>
                     </div>
@@ -305,7 +321,7 @@
                       <img class="mr-3" src="images/gallery9.jpg" class="img-fluid" alt="Free Template by colorlib.com">
                       <div class="media-body">
                         <h5 class="mt-0">Gravy Vegitable</h5>
-                        <p>Different types of gravy vegitable like Mutter Paneer, Baingan Tamatar, Egg curry/Shahi Kofta, Chana Masala, Kadhai Paneer, Rajma, Chicken/Kofta currey are available.</p>
+                        <p style="font-size: 19px">Different types of gravy vegitable like Mutter Paneer, Baingan Tamatar, Egg curry/Shahi Kofta, Chana Masala, Kadhai Paneer, Rajma, Chicken/Kofta currey are available.</p>
                         
                       </div>
                     </div>
@@ -314,7 +330,7 @@
                       <img class="mr-3" src="images/gallery12.jpg" class="img-fluid" alt="Free Template by colorlib.com">
                       <div class="media-body">
                         <h5 class="mt-0">Dal</h5>
-                        <p>Types of available Dal are Dhaba Dal, Dal tadka, Green Dal, Moong Dal, Chana Dal tadka, Rajma, Masoor Dal.</p>
+                        <p style="font-size: 19px">Types of available Dal are Dhaba Dal, Dal tadka, Green Dal, Moong Dal, Chana Dal tadka, Rajma, Masoor Dal.</p>
                         
                       </div>
                     </div>
@@ -323,7 +339,7 @@
                       <img class="mr-3" src="images/surprise.jpg" class="img-fluid" alt="Free Template by colorlib.com">
                       <div class="media-body">
                         <h5 class="mt-0">Surprise</h5>
-                        <p>Surprises is something which everyone loves and are excited to know what they get in it and this is something we have in the thali for you.</p>
+                        <p style="font-size: 19px">Surprises is something which everyone loves and are excited to know what they get in it and this is something we have in the thali for you.</p>
                         
                       </div>
                     </div>
@@ -488,20 +504,45 @@
             <form action="" method="post">
               <div class="form-group">
                 <label for="name" class="sr-only">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Name">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
               </div>
               <div class="form-group">
                 <label for="email" class="sr-only">Email</label>
-                <input type="text" class="form-control" id="email" placeholder="Email">
+                <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
               </div>
               <div class="form-group">
                 <label for="message" class="sr-only">Message</label>
-                <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Write your message"></textarea>
+                <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Write your message" required></textarea>
               </div>
               <div class="form-group">
-                <input type="submit" class="btn btn-primary btn-lg" value="Send Message">
+                <input type="submit" name="send" class="btn btn-primary btn-lg" value="Send Message">
               </div>
             </form>
+              
+              <?php 
+           include('connect.php');
+           if(isset($_POST['send']))
+           {
+               $name=$_REQUEST['name'];
+               $email=$_REQUEST['email'];
+               $message=$_REQUEST['message'];
+               
+               $sql="INSERT INTO `feedback`(`name`, `email`, `message`) VALUES ('".$name."','".$email."','".$message."')";
+               $res = mysqli_query($con,$sql);
+               if($res>=1){
+                   echo "<script>
+                   alert('Thank-you for your valuable feedback');
+                   </script>";
+               }
+               else{
+                   echo "<script> alert('Feedback not sent');
+                   window.location.href='#';
+                   </script>";
+               }
+           }
+           ?>
+              
+              
           </div>
           <div class="col-md-1"></div>
           <div class="col-md-4 site-animate">
@@ -583,7 +624,7 @@
           </div>
           <div class="col-md-12 text-center">
             <p>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://fnplus.xyz" target="_blank">FnPlus</a>
+Copyright &copy; 2018 All rights reserved | Made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://fnplus.xyz" target="_blank">FnPlus</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
@@ -611,27 +652,27 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                   <div class="row">
                     <div class="col-md-6 form-group">
                       <label for="m_fullname">Full Name</label>
-                      <input type="text" class="form-control" id="m_fullname" name="m_fullname">
+                      <input type="text" class="form-control" id="m_fullname" name="m_fullname" required>
                     </div>
                     <div class="col-md-6 form-group">
                       <label for="m_number">Whatsapp Number</label>
-                      <input type="text" class="form-control" id="m_number" name="m_number">
+                      <input type="text" class="form-control" id="m_number" name="m_number" required>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12 form-group">
                       <label for="m_email">Email</label>
-                      <input type="email" class="form-control" id="m_email" name="m_email">
+                      <input type="email" class="form-control" id="m_email" name="m_email" required>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6 form-group">
                       <label for="m_people">How Many People</label>
-                      <input type="text" class="form-control" id="m_people" name="m_people">
+                      <input type="text" class="form-control" id="m_people" name="m_people" required>
                     </div>
                     <div class="col-md-6 form-group">
                       <label for="m_date">Date</label>
-                      <input type="text" class="form-control" id="m_date" name="m_date">
+                      <input type="text" class="form-control" id="m_date" name="m_date" required>
                     </div>
                   </div>
 
@@ -656,7 +697,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                   <div class="row">
                     <div class="col-md-12 form-group">
                       <label for="m_address">Address</label>
-                      <textarea class="form-control" id="m_address" name="m_address" cols="30" rows="7"></textarea>
+                      <textarea class="form-control" id="m_address" name="m_address" cols="30" rows="7" required></textarea>
                     </div>
                   </div>
                   
